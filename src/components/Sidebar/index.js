@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
 import './styles.css';
 import logo from '../../assets/img/Bank_72.png'
 
 function Sidebar({ sidebarOpen, closeSidebar }) {
+
+  function hideMenu() {
+    document.getElementById("link").className ="";
+};
 
   return (
     <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
@@ -21,26 +26,36 @@ function Sidebar({ sidebarOpen, closeSidebar }) {
       <div className="sidebar__menu">
         <div className="sidebar__link">
           <i className="fa fa-home"></i>
-          <a href="#">Home</a>
+          <Link id="link" className="active_menu_link" onClick={hideMenu} to={`/`}>
+              Home
+          </Link>
         </div>
         <h2>TRADE</h2>
         <div className="sidebar__link">
           <i className="fa-solid fa-right-left"></i>
-          <a href="#">Exchange</a>
+          <Link onClick={hideMenu} to={`/exchange`}>
+              Exchange
+          </Link>
         </div>
         <div className="sidebar__link">
           <i className="fa-solid fa-arrows-rotate"></i>
-          <a href="#">Liquidity</a>
+          <Link onClick={hideMenu} to={`/liquidity`}>
+              Liquidity
+          </Link>
         </div>
         <h2>FARMS</h2>
         <div className="sidebar__link">
           <i className="fa-solid fa-tractor"></i>
-          <a href="#">Farm</a>
+          <Link onClick={hideMenu} to={`/farm`}>
+              Farm
+          </Link>
         </div>
         <h2>STAKE</h2>
         <div className="sidebar__link">
           <i className="fa-solid fa-handshake"></i>
-          <a href="#">Pool</a>
+          <Link onClick={hideMenu} to={`/pool`}>
+              Pool
+          </Link>
         </div>
       </div>
     </div>

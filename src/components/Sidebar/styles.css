@@ -5,6 +5,7 @@
     padding: 20px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+    border-right: 2px solid #d19f44;
   }
   
   .sidebar__title {
@@ -13,7 +14,6 @@
     align-items: center;
     color: #f3f4f6;
     margin-bottom: 30px;
-    /* color: #E85B6B; */
   }
   
   .sidebar__img {
@@ -61,9 +61,17 @@
     font-weight: 700;
   }
 
+
+
+  .active_menu_link {
+    padding: 7px;
+    background: rgba(209, 160, 68, 0.404);
+    border-radius: 3px;
+  }
+
   .sidebar__link a:focus {
     padding: 7px;
-    background: rgba(62, 161, 117, 0.3);
+    background: rgba(209, 160, 68, 0.404);
     border-radius: 3px;
 }
   

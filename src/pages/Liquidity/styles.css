@@ -1,0 +1,7 @@
+.liquidity__container {
+    background-image: url('../../assets/img/bg-globo-bank.png');
+    background-size: cover;
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 35px;
+}
