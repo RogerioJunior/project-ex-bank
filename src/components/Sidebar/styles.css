@@ -22,11 +22,12 @@
   }
   
   .sidebar__title > div > img {
-    width: 75px;
+    width: 85px;
     object-fit: contain;
   }
   
   .sidebar__title > div > h1 {
+    margin-left: 15px;
     font-size: 18px;
     display: inline;
   }
@@ -34,10 +35,11 @@
   .sidebar__title > i {
     font-size: 18px;
     display: none;
+    color: #d19f44;
   }
   
   .sidebar__menu > h2 {
-    color: #3ea175;
+    color: #d19f44;
     font-size: 16px;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -52,40 +54,19 @@
     margin-bottom: 5px;
   }
   
-  .active_menu_link {
-    background: rgba(62, 161, 117, 0.3);
-    color: #3ea175;
-  }
-  
-  .active_menu_link a {
-    color: #3ea175 !important;
-  }
-  
   .sidebar__link > a {
     text-decoration: none;
     color: #a5aaad;
     font-weight: 700;
   }
+
+  .sidebar__link a:focus {
+    padding: 7px;
+    background: rgba(62, 161, 117, 0.3);
+    border-radius: 3px;
+}
   
   .sidebar__link > i {
-    margin-right: 10px;
-    font-size: 18px;
-  }
-  
-  .sidebar__logout {
-    margin-top: 20px;
-    padding: 10px;
-    color: #e65061;
-  }
-  
-  .sidebar__logout > a {
-    text-decoration: none;
-    color: #e65061;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  
-  .sidebar__logout > i {
     margin-right: 10px;
     font-size: 18px;
   }
@@ -100,6 +81,10 @@
   @media only screen and (max-width: 978px) {
     #sidebar {
       display: none;
+    }
+
+    .sidebar__title > div > h1 {
+      margin-left: 0;
     }
   
     .sidebar__title > i {
