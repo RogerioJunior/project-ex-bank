@@ -10,7 +10,7 @@
   
   .sidebar__title {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #f3f4f6;
     margin-bottom: 30px;
@@ -78,6 +78,19 @@
   .sidebar__link > i {
     margin-right: 10px;
     font-size: 18px;
+  }
+
+  .sidebar__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f3f4f6;
+    margin-top: 100px;
+  }
+
+  .sidebar__footer > div > img {
+    width: 120px;
+    object-fit: contain;
   }
   
   .sidebar_responsive {

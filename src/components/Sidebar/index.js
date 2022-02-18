@@ -12,7 +12,6 @@ function Sidebar({ sidebarOpen, closeSidebar }) {
     <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
       <div className="sidebar__title">
         <div className="sidebar__img">
-          <img src={logo} alt="logo" />
           <h1>Infinity Bank</h1>
         </div>
         <i
@@ -58,6 +57,13 @@ function Sidebar({ sidebarOpen, closeSidebar }) {
           </Link>
         </div>
       </div>
+
+      <div className="sidebar__footer">
+      <div className="sidebar__img">
+          <img src={logo} alt="logo" />
+        </div>
+        </div>
+
     </div>
   );
 };

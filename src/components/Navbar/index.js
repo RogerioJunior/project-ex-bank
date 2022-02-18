@@ -8,7 +8,7 @@ function Navbar({ sidebarOpen, openSidebar }) {
                 <i className="fa fa-bars" aria-hidden="true"></i>
             </div>
             <div className="navbar__right">
-            <button>Connect</button>
+            <button>Connect to wallet</button>
             </div>
         </nav>
     );

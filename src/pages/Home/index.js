@@ -1,4 +1,3 @@
-import hello from '../../assets/img/Bank_72.png'
 import './styles.css';
 
 function Home() {
@@ -8,10 +7,8 @@ function Home() {
       <div className="home__container">
 
         <div className="home__title">
-          <img src={hello} alt="hello" />
           <div className="home__greeting">
-            <h1>Hello Investor</h1>
-            <p>Welcome to your Infinity Bank dashboard</p>
+            <h1>Infinity Bank</h1>
           </div>
         </div>
 
