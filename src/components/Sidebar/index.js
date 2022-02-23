@@ -5,8 +5,21 @@ import logo from '../../assets/img/Bank_72.png'
 function Sidebar({ sidebarOpen, closeSidebar }) {
 
   function hideMenu() {
-    document.getElementById("link").className ="";
-};
+    document.getElementById("link").className = "";
+  };
+
+  function hideTrade() {
+    document.getElementById("trade").classList.toggle('show');
+    document.getElementById("fa-trade-img").classList.toggle('rotate');
+  };
+  function hideFarm() {
+    document.getElementById("farm").classList.toggle('show');
+    document.getElementById("fa-farm-img").classList.toggle('rotate');
+  };
+  function hideStake() {
+    document.getElementById("stake").classList.toggle('show');
+    document.getElementById("fa-stake-img").classList.toggle('rotate');
+  };
 
   return (
     <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
@@ -26,43 +39,61 @@ function Sidebar({ sidebarOpen, closeSidebar }) {
         <div className="sidebar__link">
           <i className="fa fa-home"></i>
           <Link id="link" className="active_menu_link" onClick={hideMenu} to={`/`}>
-              Home
+            Home
           </Link>
         </div>
-        <h2>TRADE</h2>
-        <div className="sidebar__link">
-          <i className="fa-solid fa-right-left"></i>
-          <Link onClick={hideMenu} to={`/exchange`}>
+
+        <a href="#" className="trade-btn" onClick={hideTrade}><h2>TRADE</h2>
+          <span id="fa-trade-img" className="fas fa-caret-down first"></span>
+        </a>
+
+        <div id="trade" className="trade__show show">
+          <div className="sidebar__link">
+            <i className="fa-solid fa-right-left"></i>
+            <Link onClick={hideMenu} to={`/exchange`}>
               Exchange
-          </Link>
-        </div>
-        <div className="sidebar__link">
-          <i className="fa-solid fa-arrows-rotate"></i>
-          <Link onClick={hideMenu} to={`/liquidity`}>
+            </Link>
+          </div>
+          <div className="sidebar__link">
+            <i className="fa-solid fa-arrows-rotate"></i>
+            <Link onClick={hideMenu} to={`/liquidity`}>
               Liquidity
-          </Link>
+            </Link>
+          </div>
         </div>
-        <h2>FARMS</h2>
-        <div className="sidebar__link">
-          <i className="fa-solid fa-tractor"></i>
-          <Link onClick={hideMenu} to={`/farm`}>
+
+        <a href="#" className="farm-btn" onClick={hideFarm}><h2>FARMS</h2>
+          <span id="fa-farm-img" className="fas fa-caret-down first"></span>
+        </a>
+
+        <div id="farm" className="farm__show show">
+          <div className="sidebar__link">
+            <i className="fa-solid fa-tractor"></i>
+            <Link onClick={hideMenu} to={`/farm`}>
               Farm
-          </Link>
+            </Link>
+          </div>
         </div>
-        <h2>STAKE</h2>
-        <div className="sidebar__link">
-          <i className="fa-solid fa-handshake"></i>
-          <Link onClick={hideMenu} to={`/pool`}>
+
+        <a href="#" className="stake-btn" onClick={hideStake}><h2>STAKE</h2>
+          <span id="fa-stake-img" className="fas fa-caret-down first"></span>
+        </a>
+
+        <div id="stake" className="stake__show show">
+          <div className="sidebar__link">
+            <i className="fa-solid fa-handshake"></i>
+            <Link onClick={hideMenu} to={`/pool`}>
               Pool
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="sidebar__footer">
-      <div className="sidebar__img">
+        <div className="sidebar__img">
           <img src={logo} alt="logo" />
         </div>
-        </div>
+      </div>
 
     </div>
   );
