@@ -124,11 +124,20 @@
 }
 
 .sidebar__footer {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #f3f4f6;
   margin-top: 100px;
+}
+
+.sidebar__countdown {
+  margin-bottom: 50px;
+}
+
+.sidebar__img {
+  justify-content: center;
 }
 
 .sidebar__footer>div>img {

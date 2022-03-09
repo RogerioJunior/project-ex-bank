@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import './styles.css';
 import logo from '../../assets/img/Bank_72.png'
+import Countdown from "../../components/Countdown";
 
 function Sidebar({ sidebarOpen, closeSidebar }) {
 
@@ -50,13 +51,13 @@ function Sidebar({ sidebarOpen, closeSidebar }) {
         <div id="trade" className="trade__show show">
           <div className="sidebar__link">
             <i className="fa-solid fa-right-left"></i>
-            <Link onClick={hideMenu} to={`/exchange`}>
+            <Link onClick={hideMenu} to={`/`}>
               Exchange
             </Link>
           </div>
           <div className="sidebar__link">
             <i className="fa-solid fa-arrows-rotate"></i>
-            <Link onClick={hideMenu} to={`/liquidity`}>
+            <Link onClick={hideMenu} to={`/`}>
               Liquidity
             </Link>
           </div>
@@ -69,7 +70,7 @@ function Sidebar({ sidebarOpen, closeSidebar }) {
         <div id="farm" className="farm__show show">
           <div className="sidebar__link">
             <i className="fa-solid fa-tractor"></i>
-            <Link onClick={hideMenu} to={`/farm`}>
+            <Link onClick={hideMenu} to={`/`}>
               Farm
             </Link>
           </div>
@@ -82,7 +83,7 @@ function Sidebar({ sidebarOpen, closeSidebar }) {
         <div id="stake" className="stake__show show">
           <div className="sidebar__link">
             <i className="fa-solid fa-handshake"></i>
-            <Link onClick={hideMenu} to={`/pool`}>
+            <Link onClick={hideMenu} to={`/`}>
               Pool
             </Link>
           </div>
@@ -90,6 +91,9 @@ function Sidebar({ sidebarOpen, closeSidebar }) {
       </div>
 
       <div className="sidebar__footer">
+        <div className="sidebar__countdown">
+          <Countdown />
+        </div>
         <div className="sidebar__img">
           <img src={logo} alt="logo" />
         </div>
